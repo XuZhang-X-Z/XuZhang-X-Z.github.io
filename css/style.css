@@ -710,86 +710,148 @@ p {
    RESPONSIVE
    =========================================== */
 
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    section {
+        padding: 16px 0;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+
+    .header {
+        padding: 12px 14px;
+    }
+
     .header-content {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
+    }
+
+    .name {
+        font-size: 17px;
+        margin-bottom: 2px;
+    }
+
+    .email {
+        font-size: 10px;
     }
 
     .nav {
-        gap: 12px;
+        gap: 10px;
         font-size: 11px;
+    }
+
+    .nav a {
+        padding: 4px 2px;
     }
 
     .nav a::after {
         transition: width var(--transition);
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
-    .divider {
-        display: none;
-    }
-
-    .research-items {
-        grid-template-columns: 1fr;
-    }
-
-    .tags span {
-        transition: all var(--transition);
-    }
-
-    section {
-        padding: 12px 0;
     }
 
     .container {
         padding: 0 14px;
     }
 
-    .header {
-        padding: 10px 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 13px;
-    }
-
-    .name {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .name:hover {
-        letter-spacing: 0.15em;
-    }
-
-    .nav {
-        flex-wrap: wrap;
-        gap: 8px;
-        font-size: 10px;
-    }
-
-    .nav a::after {
-        transition: width var(--transition);
+    section {
+        padding: 14px 0;
     }
 
     h2 {
         font-size: 13px;
-        margin-bottom: 10px;
+        margin-bottom: 11px;
     }
 
-    .header-content {
-        gap: 6px;
+    h3 {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    p {
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .education h3,
+    .interests h3 {
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
+
+    .education p {
+        font-size: 11px;
+        margin-bottom: 9px;
+    }
+
+    .interests li {
+        padding: 2px 0 2px 12px;
+        font-size: 11px;
+    }
+
+    .interests li:before {
+        font-size: 9px;
+    }
+
+    .research-items {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .research-item {
+        padding: 11px;
+    }
+
+    .research-item h3 {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .research-item p {
+        font-size: 10px;
+    }
+
+    .projects-list {
+        gap: 11px;
+    }
+
+    .project {
+        padding: 11px;
     }
 
     .project-header {
-        flex-direction: column;
-        gap: 4px;
+        gap: 10px;
+        margin-bottom: 7px;
+    }
+
+    .project h3 {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .project > p {
+        font-size: 10px;
+        margin-bottom: 7px;
     }
 
     .date {
@@ -802,19 +864,405 @@ p {
 
     .tags span {
         font-size: 9px;
-        padding: 2px 5px;
+        padding: 3px 6px;
     }
 
     .tags span:hover {
-        transform: translateY(-1px) scale(1.03);
+        transition: all var(--transition);
+    }
+
+    .contact-info {
+        font-size: 11px;
+    }
+
+    .contact-info p {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        font-size: 10px;
+        margin-top: 12px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .header {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .header-left {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 15px;
+        margin-bottom: 2px;
+        font-weight: 700;
+    }
+
+    .name:hover {
+        letter-spacing: 0.12em;
+    }
+
+    .email {
+        font-size: 9px;
+    }
+
+    .email a {
+        padding: 0 1px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 9px;
+        width: 100%;
+    }
+
+    .nav a {
+        padding: 2px 0;
+        flex: 0 1 auto;
+        min-width: fit-content;
+    }
+
+    .nav a::after {
+        display: none;
+    }
+
+    .nav a:hover {
+        transform: none;
+    }
+
+    .nav a.active {
+        border-bottom-color: var(--accent-warm);
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 12px 0;
+        border-top: 1px solid var(--border);
+    }
+
+    h2 {
+        font-size: 12px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+    }
+
+    h3 {
+        font-size: 11px;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 10px;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .education h3,
+    .interests h3 {
+        font-size: 11px;
+        margin-bottom: 6px;
+        font-weight: 700;
+    }
+
+    .education p {
+        font-size: 10px;
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .education strong {
+        font-weight: 700;
+    }
+
+    .interests ul {
+        padding: 0;
+    }
+
+    .interests li {
+        padding: 2px 0 2px 11px;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .interests li:hover {
+        transform: translateX(2px);
+    }
+
+    .interests li:before {
+        font-size: 8px;
     }
 
     .research-items {
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
+    .research-item {
+        padding: 10px;
+        border: 1px solid var(--border);
+    }
+
+    .research-item::before {
+        display: none;
+    }
+
+    .research-item:hover {
+        border-color: var(--accent-warm);
+        box-shadow: 0 2px 8px rgba(200, 149, 111, 0.08);
+        transform: translateY(-1px);
+    }
+
+    .research-item h3 {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .research-item:hover h3 {
+        color: var(--accent-warm);
+    }
+
+    .research-item p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .projects-list {
+        gap: 10px;
+    }
+
+    .project {
+        padding: 10px;
+        border: 1px solid var(--border);
+    }
+
+    .project::before {
+        height: 1px;
+    }
+
+    .project::after {
+        display: none;
+    }
+
     .project:hover {
+        border-color: var(--accent-warm);
+        box-shadow: 0 2px 8px rgba(200, 149, 111, 0.08);
+        transform: translateX(0);
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 3px;
+        margin-bottom: 6px;
+    }
+
+    .project h3 {
+        font-size: 10px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .project:hover h3 {
+        color: var(--accent-warm);
+        letter-spacing: 0.05em;
+    }
+
+    .project > p {
+        font-size: 9px;
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
+
+    .project:hover > p {
+        color: var(--primary);
+    }
+
+    .date {
+        font-size: 9px;
+        color: var(--accent);
+        white-space: normal;
+        flex-shrink: 0;
+        font-weight: 400;
+    }
+
+    .project:hover .date {
+        color: var(--accent-cool);
+    }
+
+    .tags {
+        gap: 4px;
+        margin: 0;
+    }
+
+    .tags span {
+        font-size: 8px;
+        border: 1px solid var(--border);
+        padding: 2px 5px;
+        background: var(--secondary);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--accent);
+        position: relative;
+        overflow: hidden;
+        transition: all var(--transition);
+    }
+
+    .tags span::before {
+        display: none;
+    }
+
+    .tags span:hover {
+        border-color: var(--accent-warm);
+        background: var(--accent-warm);
+        color: var(--secondary);
+        transform: translateY(-1px);
+    }
+
+    .contact-info {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .contact-info p {
+        margin: 0 0 5px 0;
+        font-size: 10px;
+        color: var(--primary);
+    }
+
+    .contact-info p:hover {
         transform: translateX(1px);
+    }
+
+    .contact-info strong {
+        font-weight: 700;
+    }
+
+    .contact-info a {
+        font-weight: 500;
+        transition: all var(--transition);
+    }
+
+    .contact-info a::before {
+        display: none;
+    }
+
+    .contact-info a:hover {
+        color: var(--accent-warm);
+    }
+
+    .footer {
+        margin-top: 12px;
+        padding: 10px 0;
+        border-top: 1px solid var(--border);
+        font-size: 9px;
+        color: var(--accent);
+    }
+
+    .footer:hover {
+        border-top-color: var(--accent-warm);
+        color: var(--accent-warm);
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    .footer p:hover {
+        letter-spacing: 0.05em;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 11px;
+    }
+
+    .header {
+        padding: 8px 10px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .email {
+        font-size: 8px;
+    }
+
+    .nav {
+        gap: 4px;
+        font-size: 8px;
+    }
+
+    .nav a {
+        padding: 2px 0;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    h3 {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    p {
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+
+    .research-item {
+        padding: 8px;
+    }
+
+    .project {
+        padding: 8px;
+    }
+
+    .tags span {
+        font-size: 7px;
+        padding: 2px 4px;
+    }
+
+    .contact-info {
+        font-size: 9px;
+    }
+
+    .footer {
+        font-size: 8px;
     }
 }
 
